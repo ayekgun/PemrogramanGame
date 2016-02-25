@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StartScreenEvents</name>
+    <events>
+        <include>Windows8Events</include>
+        <comment>Set game title and description from globals set in the CustomizeGameHere event sheet</comment>
+        <event-block sid="8287594195825257">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3194833826244707" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2355706067837626" type="GameTitleText">
+                    <param id="0" name="Text">GameBelajarHurufUntukAnak</param>
+                </action>
+                <action id="0" name="Set text" sid="4791604451542582" type="GameDescriptionText">
+                    <param id="0" name="Text">Deskripsi</param>
+                </action>
+                <action id="1" name="Append text" sid="8990233165181416" type="SnappedText">
+                    <param id="0" name="Text">&quot; &quot; &amp; GameBelajarHurufUntukAnak &amp; &quot;.&quot;</param>
+                </action>
+                <action id="5" name="Set frame" sid="9603469131118732" type="StartIcon">
+                    <param id="0" name="Frame number">NavigationIconColor = &quot;light&quot; ? 0 : 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="7826430493487403" title="UnsnappedMode">
+            <sub-events>
+                <comment>When the StartIcon is touched or clicked, go to the main screen.</comment>
+                <event-block any="1" sid="6401307725455659">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2334877771669089" type="Touch">
+                            <param id="0" name="Object">StartIcon</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="1826775611138134" type="System">
+                            <param id="0" name="Layout">SoundBoard</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>SoundBoardTemplate</name>
+    <description>Tap the picture to hear an associated sound.</description>
+    <version>1.0</version>
+    <author>Enter your name here</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>28wrji5826khz</unique-id>
+    <saved-with-version>20900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra.com" id="win8" version="1">Windows 8</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1366</width>
+        <height>768</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>StartScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">iPhone only</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="GameTitleText" sid="4451646837127242">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="StartIcon" sid="3163116207355455">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="7159577817636804" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="1" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="1" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Image" sid="8922061062585018">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="position" sid="5003041300901316" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="26" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="5156328055829139" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-a-icon.png">
+                        <collision-poly>
+                            <point x="0.273438" y="0.273438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.726563" y="0.273438" />
+                            <point x="0.867188" y="0.867188" />
+                            <point x="0.5" y="0.820313" />
+                            <point x="0.117188" y="0.882813" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-b-icon.png">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.804688" y="0.195313" />
+                            <point x="0.765625" y="0.5" />
+                            <point x="0.835938" y="0.835938" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.171875" y="0.828125" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-c-icon.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.804688" y="0.195313" />
+                            <point x="0.445313" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.164063" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-d-icon.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.84375" y="0.5" />
+                            <point x="0.820313" y="0.820313" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.1875" y="0.8125" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-e-icon.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.0078125" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.773438" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.203125" y="0.796875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-f-icon.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.601563" y="0.601563" />
+                            <point x="0.5" y="0.976563" />
+                            <point x="0.210938" y="0.789063" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-g-icon.png">
+                        <collision-poly>
+                            <point x="0.195313" y="0.195313" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="0.835938" y="0.5" />
+                            <point x="0.828125" y="0.828125" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.1875" y="0.8125" />
+                            <point x="0.15625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-h-icon.png">
+                        <collision-poly>
+                            <point x="0.164063" y="0.164063" />
+                            <point x="0.5" y="0.351563" />
+                            <point x="0.828125" y="0.171875" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="0.59375" />
+                            <point x="0.179688" y="0.820313" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-i-icon.png">
+                        <collision-poly>
+                            <point x="0.359375" y="0.359375" />
+                            <point x="0.5" y="0.0078125" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.640625" y="0.5" />
+                            <point x="0.640625" y="0.640625" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.351563" y="0.648438" />
+                            <point x="0.351563" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-j-icon.png">
+                        <collision-poly>
+                            <point x="0.539063" y="0.539063" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.789063" y="0.210938" />
+                            <point x="0.796875" y="0.5" />
+                            <point x="0.789063" y="0.789063" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.210938" y="0.789063" />
+                            <point x="0.539063" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-k-icon.png">
+                        <collision-poly>
+                            <point x="0.117188" y="0.117188" />
+                            <point x="0.5" y="0.09375" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.640625" y="0.5" />
+                            <point x="0.78125" y="0.78125" />
+                            <point x="0.132813" y="0.867188" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-l-icon.png">
+                        <collision-poly>
+                            <point x="0.210938" y="0.210938" />
+                            <point x="0.5" y="0.046875" />
+                            <point x="0.507813" y="0.5" />
+                            <point x="0.796875" y="0.796875" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.203125" y="0.796875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-m-icon.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0.445313" />
+                            <point x="0.953125" y="0.046875" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.046875" y="0.953125" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-n-icon.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.835938" y="0.835938" />
+                            <point x="0.5" y="0.820313" />
+                            <point x="0.148438" y="0.851563" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-o-icon.png">
+                        <collision-poly>
+                            <point x="0.179688" y="0.179688" />
+                            <point x="0.5" y="0" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.84375" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.195313" y="0.804688" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-p-icon.png">
+                        <collision-poly>
+                            <point x="0.179688" y="0.179688" />
+                            <point x="0.5" y="0.0234375" />
+                            <point x="0.820313" y="0.179688" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.632813" y="0.632813" />
+                            <point x="0.5" y="0.632813" />
+                            <point x="0.15625" y="0.84375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-q-icon.png">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0.0078125" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.789063" y="0.5" />
+                            <point x="0.867188" y="0.867188" />
+                            <point x="0.5" y="0.898438" />
+                            <point x="0.226563" y="0.773438" />
+                            <point x="0.140625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-r-icon.png">
+                        <collision-poly>
+                            <point x="0.171875" y="0.171875" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.820313" y="0.179688" />
+                            <point x="0.742188" y="0.5" />
+                            <point x="0.820313" y="0.820313" />
+                            <point x="0.5" y="0.601563" />
+                            <point x="0.15625" y="0.84375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-s-icon.png">
+                        <collision-poly>
+                            <point x="0.171875" y="0.171875" />
+                            <point x="0.5" y="0" />
+                            <point x="0.789063" y="0.210938" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.820313" y="0.820313" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.179688" y="0.820313" />
+                            <point x="0.257813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-t-icon.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="0.640625" y="0.5" />
+                            <point x="0.640625" y="0.640625" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-u-icon.png">
+                        <collision-poly>
+                            <point x="0.171875" y="0.171875" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.1875" y="0.8125" />
+                            <point x="0.164063" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-v-icon.png">
+                        <collision-poly>
+                            <point x="0.164063" y="0.164063" />
+                            <point x="0.5" y="0.632813" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="0.734375" y="0.734375" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.289063" y="0.710938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-w-icon.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.945313" y="0.0546875" />
+                            <point x="0.914063" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="0.640625" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0.0703125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-x-icon.png">
+                        <collision-poly>
+                            <point x="0.265625" y="0.265625" />
+                            <point x="0.5" y="0.242188" />
+                            <point x="0.828125" y="0.171875" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.773438" y="0.773438" />
+                            <point x="0.5" y="0.734375" />
+                            <point x="0.164063" y="0.835938" />
+                            <point x="0.328125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-y-icon.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.640625" y="0.640625" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.367188" y="0.632813" />
+                            <point x="0.328125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\JUWOTO\Documents\andik\icon\Letter-z-icon.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0.0078125" />
+                            <point x="0.820313" y="0.179688" />
+                            <point x="0.664063" y="0.5" />
+                            <point x="0.789063" y="0.789063" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.179688" y="0.820313" />
+                            <point x="0.320313" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="1730606579365661">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="9097758061305874">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Windows8" sid="7061084030979542">
+            <plugin id="win8" />
+        </object-type>
+        <object-type name="GameDirectionsText" sid="1709716198005848">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PreviousIcon" sid="5918360318004006">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="8045899728315569" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="1" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameDescriptionText" sid="9483900996223149">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SnappedText" sid="1121322868359119">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Function" sid="9855404565900325">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="TiledBackground" sid="5054338210531249">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="NextIcon" sid="6863304852178362">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="3892930672789843" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.851562" y="0.851562" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148437" y="0.851562" />
+                            <point x="0" y="0.5" />
+                            <point x="0.148437" y="0.148437" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851562" y="0.148437" />
+                            <point x="1" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PaginationText" sid="8581230279118961">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HomeIcon" sid="3121468147282576">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="983198729613366" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="1" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.148438" y="0.148438" />
+                            <point x="0.5" y="0" />
+                            <point x="0.851563" y="0.148438" />
+                            <point x="1" y="0.5" />
+                            <point x="0.851563" y="0.851563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>StartScreen.xml</layout>
+        <layout>SoundBoard.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>StartScreenEvents.xml</event-sheet>
+        <event-sheet>SoundBoardEvents.xml</event-sheet>
+        <event-sheet>CustomizeGameHere.xml</event-sheet>
+        <event-sheet>Windows8Events.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="19">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="20">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Windows8" uid="21">
+            <properties>
+                <test-mode>No</test-mode>
+                <about-setting>No</about-setting>
+                <support-setting>No</support-setting>
+                <privacy-setting>No</privacy-setting>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="22" />
+    </global-instances>
+    <sounds-folder>
+        <file name="a.m4a" />
+        <file name="a.ogg" />
+        <file name="b.m4a" />
+        <file name="b.ogg" />
+        <file name="c.m4a" />
+        <file name="c.ogg" />
+        <file name="d.m4a" />
+        <file name="d.ogg" />
+        <file name="e.m4a" />
+        <file name="e.ogg" />
+        <file name="f.m4a" />
+        <file name="f.ogg" />
+        <file name="g.m4a" />
+        <file name="g.ogg" />
+        <file name="h.m4a" />
+        <file name="h.ogg" />
+        <file name="i.m4a" />
+        <file name="i.ogg" />
+        <file name="j.m4a" />
+        <file name="j.ogg" />
+        <file name="k.m4a" />
+        <file name="k.ogg" />
+        <file name="l.m4a" />
+        <file name="l.ogg" />
+        <file name="m.m4a" />
+        <file name="m.ogg" />
+        <file name="n.m4a" />
+        <file name="n.ogg" />
+        <file name="o.m4a" />
+        <file name="o.ogg" />
+        <file name="p.m4a" />
+        <file name="p.ogg" />
+        <file name="q.m4a" />
+        <file name="q.ogg" />
+        <file name="r.m4a" />
+        <file name="r.ogg" />
+        <file name="s.m4a" />
+        <file name="s.ogg" />
+        <file name="t.m4a" />
+        <file name="t.ogg" />
+        <file name="u.m4a" />
+        <file name="u.ogg" />
+        <file name="v.m4a" />
+        <file name="v.ogg" />
+        <file name="w.m4a" />
+        <file name="w.ogg" />
+        <file name="x.m4a" />
+        <file name="x.ogg" />
+        <file name="y.m4a" />
+        <file name="y.ogg" />
+        <file name="z.m4a" />
+        <file name="z.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="license.txt" />
+        <file name="README.txt" />
+        <file name="credits.txt" />
+    </files-folder>
+</c2project>

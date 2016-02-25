@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Windows8Events</name>
+    <events>
+        <comment>Handle Windows 8 snapped view</comment>
+        <event-block sid="3750664745353319">
+            <conditions>
+                <condition id="0" name="Is Windows 8 app" sid="7146091592907224" type="Windows8" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7918678050358424">
+                    <conditions>
+                        <condition id="1" name="On view state changed" sid="4513203810166206" type="Windows8">
+                            <param id="0" name="State">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3578965816978078" type="Function">
+                            <param id="0" name="Name">&quot;SetSnappedMode&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7153378396349882">
+                    <conditions>
+                        <condition id="1" name="On view state changed" sid="2509699431795049" type="Windows8">
+                            <param id="0" name="State">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3076633258388312" type="Function">
+                            <param id="0" name="Name">&quot;SetSnappedMode&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8301574625528111">
+                    <conditions>
+                        <condition id="1" name="On view state changed" sid="1523142543885532" type="Windows8">
+                            <param id="0" name="State">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8064241681025511" type="Function">
+                            <param id="0" name="Name">&quot;SetSnappedMode&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8346069167056211">
+                    <conditions>
+                        <condition id="1" name="On view state changed" sid="4643110135933942" type="Windows8">
+                            <param id="0" name="State">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1857355788142065" type="Function">
+                            <param id="0" name="Name">&quot;SetSnappedMode&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5964822352015475">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9043356971732632" type="Function">
+                            <param id="0" name="Name">&quot;SetSnappedMode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4757077569331785">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="6735571428391304" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="2094425433641398" type="System">
+                                    <param id="0" name="Group name">&quot;UnsnappedMode&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="3225116378327701" type="System">
+                                    <param id="0" name="Group name">&quot;SnappedMode&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="8420189063934582" type="System">
+                                    <param id="0" name="Layer">&quot;GameLayer&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="5368838018651581" type="System">
+                                    <param id="0" name="Layer">&quot;SnappedLayer&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="8" name="Set silent" sid="8607645540584239" type="Audio">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="9408339689329969" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="279557043719543">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9447164376101364" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="3670779131647444" type="System">
+                                    <param id="0" name="Group name">&quot;SnappedMode&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="6209466207928439" type="System">
+                                    <param id="0" name="Group name">&quot;UnsnappedMode&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="1354251202603688" type="System">
+                                    <param id="0" name="Layer">&quot;GameLayer&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="6323608525406314" type="System">
+                                    <param id="0" name="Layer">&quot;SnappedLayer&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="8" name="Set silent" sid="7483160138672388" type="Audio">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="6191107171851073" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" inactive="1" sid="4231196059453467" title="SnappedMode">
+                    <sub-events>
+                        <event-block sid="1390043033306414">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="4078893496222207" type="Touch" />
+                                <condition id="2" name="Compare view state" sid="1278994041216636" type="Windows8">
+                                    <param id="0" name="State">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Try unsnap" sid="4665368187080941" type="Windows8" />
+                                <action id="-12" name="Set group active" sid="2459249540186209" type="System">
+                                    <param id="0" name="Group name">&quot;SnappedMode&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="8547063936020385" type="System">
+                                    <param id="0" name="Group name">&quot;UnsnappedMode&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

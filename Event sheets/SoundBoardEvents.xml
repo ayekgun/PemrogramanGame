@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SoundBoardEvents</name>
+    <events>
+        <variable comment="current page number (zero-based)" constant="0" name="PageNumber" sid="2575654278420749" static="0" type="number">0</variable>
+        <include>Windows8Events</include>
+        <include>CustomizeGameHere</include>
+        <comment>Initialize layout</comment>
+        <event-block sid="2237425588728777">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4327554394664504" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3564024132779864" type="GameTitleText">
+                    <param id="0" name="Text">GameBelajarHurufUntukAnak</param>
+                </action>
+                <action id="0" name="Set text" sid="8833214584596433" type="GameDirectionsText">
+                    <param id="0" name="Text">GameDirections</param>
+                </action>
+                <action id="1" name="Append text" sid="1020318679554422" type="SnappedText">
+                    <param id="0" name="Text">&quot; &quot; &amp; GameBelajarHurufUntukAnak &amp; &quot;.&quot;</param>
+                </action>
+                <action id="5" name="Set frame" sid="4831607156647675" type="PreviousIcon">
+                    <param id="0" name="Frame number">NavigationIconColor = &quot;light&quot; ? 0 : 1</param>
+                </action>
+                <action id="5" name="Set frame" sid="4132156435000776" type="NextIcon">
+                    <param id="0" name="Frame number">NavigationIconColor = &quot;light&quot; ? 0 : 1</param>
+                </action>
+                <action id="5" name="Set frame" sid="3385250386951042" type="HomeIcon">
+                    <param id="0" name="Frame number">NavigationIconColor = &quot;light&quot; ? 0 : 1</param>
+                </action>
+                <action id="0" name="Call function" sid="8168547629811978" type="Function">
+                    <param id="0" name="Name">&quot;AdjustUIVisibility&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Show or hide icon to navigate back to start screen according to preference set in CustomizeGameHere event sheet</comment>
+                <event-block sid="2393996337397356">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6641195244586657" type="System">
+                            <param id="0" name="Variable">ShowHomeButton</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2423834483507946" type="HomeIcon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9384369155731778">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7068614724036193" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7623608055481569" type="HomeIcon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="3647775357003462" title="UnsnappedMode">
+            <sub-events>
+                <comment>If an image is touched, stop whatever sound is playing and start the sound corresponding to the image</comment>
+                <event-block sid="1864351796975496">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9655824130767795" type="Touch">
+                            <param id="0" name="Object">Image</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="5125000820148633" type="Image" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="5619867775282352" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="508774983821223" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">TokenAt(SoundFileList, Image.Position + (PageNumber * Image.Count), &quot;|&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Page back</comment>
+                <event-block sid="9164993426842366">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="205865676031782" type="Touch">
+                            <param id="0" name="Object">PreviousIcon</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="9574111466044151" type="PreviousIcon" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="7932640029624563" type="System">
+                            <param id="0" name="Variable">PageNumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="1002366515163384" type="Image">
+                            <param id="0" name="Frame number">Self.position + (PageNumber * Image.Count)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8148718982020344" type="Function">
+                            <param id="0" name="Name">&quot;AdjustUIVisibility&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Page up</comment>
+                <event-block sid="6468110186069551">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8251585328976732" type="Touch">
+                            <param id="0" name="Object">NextIcon</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="3106798972897817" type="NextIcon" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="378130929476946" type="System">
+                            <param id="0" name="Variable">PageNumber</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="7801878388237429" type="Image">
+                            <param id="0" name="Frame number">Self.position + (PageNumber * Image.Count)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7981738182332867" type="Function">
+                            <param id="0" name="Name">&quot;AdjustUIVisibility&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Go back to StartScreen</comment>
+                <event-block sid="3388057923302215">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8141966028099063" type="Touch">
+                            <param id="0" name="Object">HomeIcon</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="3492774479824282" type="HomeIcon" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7081130633003698" type="System">
+                            <param id="0" name="Variable">PageNumber</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="3660494910691833" type="System">
+                            <param id="0" name="Layout">StartScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>After pagination, some of the UI elements may need to be hidden/shown to reflect state of current page</comment>
+        <event-block sid="6277921094002069">
+            <conditions>
+                <condition id="0" name="On function" sid="1522490093988868" type="Function">
+                    <param id="0" name="Name">&quot;AdjustUIVisibility&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3715591258152769" type="PaginationText">
+                    <param id="0" name="Text">&quot;Page: &quot; &amp; (PageNumber + 1) &amp; &quot; of &quot; &amp;  ceil(Image.AnimationFrameCount / Image.Count)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>If number of images (AnimationFrameCount) isn&apos;t evenly divisible by number of image instances on the board, some of the image instances on the last screen may require hiding</comment>
+                <event-block sid="771240469638624">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2345686900119632" type="System">
+                            <param id="0" name="Object">Image</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3593793216079441">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3652957615157591" type="System">
+                                    <param id="0" name="First value">Image.Position + (Image.Count * PageNumber + 1)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">Image.AnimationFrameCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="56100526493503" type="Image">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7434989887588866">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1887990930322974" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="1372377435553605" type="Image">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Show/hide the previous button appropriately</comment>
+                <event-block sid="66316087868879">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5497156769255559" type="System">
+                            <param id="0" name="Variable">PageNumber</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="971653709535855" type="PreviousIcon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5583033639392484">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2503665687311138" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4700612319665136" type="PreviousIcon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Show/hide the next button appropriately</comment>
+                <event-block sid="5446864585745741">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8462794315432982" type="System">
+                            <param id="0" name="Variable">PageNumber</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">ceil(Image.AnimationFrameCount / Image.Count) - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5907624244173085" type="NextIcon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9193804430234699">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7654507488716929" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6033352628351582" type="NextIcon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
